@@ -1,0 +1,75 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  justify-items: center;
+  row-gap: 30px;
+}
+
+.card {
+  height: 200px;
+  width: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gameOver {
+  justify-items: center;
+  display: grid;
+}
+
+.gameOver a {
+  color: lightcyan;
+}
+
+div.board>div:nth-of-type(n+1) {
+  background-color: lightslategray;
+}
+div.board>div:nth-of-type(3n+1) {
+  background-color: lightsteelblue;
+}
+div.board>div:nth-of-type(2n+2) {
+  background-color: lightcyan;
+}
+
+.card-contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 1s;
+}
+
+.card-contents-enter-active,
+.card-contents-enter-done,
+.card-contents-exit-active {
+  transition: transform 1s;
+  transform: rotateY(180deg);
+}
+
+.card-back,
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  color: black;
+}
+
+.card-face {
+  background-color: white;
+  color: white;
+  transform: rotateY(180deg);
+}
+
