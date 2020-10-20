@@ -28,6 +28,11 @@
   color: lightcyan;
 }
 
+.end-fireworks {
+  width: 100%;
+  height: 100%;
+}
+
 div.board>div:nth-of-type(n+1) {
   background-color: lightslategray;
 }
@@ -72,4 +77,3 @@ div.board>div:nth-of-type(2n+2) {
   color: white;
   transform: rotateY(180deg);
 }
-
