@@ -1,8 +1,8 @@
-"use strict";
+
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.random = exports.LaunchPad = void 0;
 const firework_1 = require("./firework");
-class LaunchPad {
+export class LaunchPad {
     constructor(canvas, innerHeight, innerWidth) {
         this.hue = 120;
         this.limtiterTotal = 5;
@@ -12,8 +12,8 @@ class LaunchPad {
         this.mouseDown = false;
         this.mouseX = 0;
         this.mouseY = 0;
-        this.fireworks = new Array();
-        this.particles = new Array();
+        this.fireworks = [];
+        this.particles = [];
         this.canvas = canvas;
         canvas.height = this.canvasHeight = innerHeight;
         canvas.width = this.canvasWidth = innerWidth;
